@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성형 AI 상품화에 대한 고등학생 인식 조사</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #F4F7F9; /* Light Background */
+            color: #263238; /* Dark Text */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .card {
+            background-color: #FFFFFF; /* Card Background */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .header-bg {
+            background-color: #2A62B6; /* Primary Blue */
+            color: #FFFFFF;
+        }
+        .section-title {
+            color: #2A62B6; /* Primary Blue */
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            /* Adjust height based on chart type and content */
+            height: 350px; /* Default height */
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px; /* md height */
+            }
+        }
+        @media (min-width: 1024px) {
+            .chart-container {
+                height: 450px; /* lg height */
+            }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <header class="header-bg py-8 md:py-12 rounded-xl text-center mb-8 shadow-lg">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-2 leading-tight">생성형 AI로 상품화, 넌 어떻게 생각해?</h1>
+        <p class="text-xl md:text-2xl font-light">디지털 시대, 새로운 가치 창출: 생성형 AI 상품화에 대한 고등학생의 시선</p>
+        <div class="text-sm md:text-base mt-4">
+            <p>작성일: 2025년 5월 26일</p>
+            <p>조사팀: 조성찬, 이현민, 이연수, 연정훈, 민서연 (미림마이스터고 1학년 2반 1조)</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section class="lg:col-span-1 card p-6">
+            <h2 class="text-2xl font-bold mb-4 section-title">조사 개요</h2>
+            <h3 class="text-xl font-semibold mb-2">조사 배경 및 목적</h3>
+            <p class="text-base leading-relaxed mb-4">
+                생성형 AI 기술은 빠르게 발전하여 다양한 분야의 상품 및 서비스에 적용되고 있다. 이에 따라 생성형 AI를 활용한 상품화에 대한 청소년층의 인식을 이해하는 것이 중요해졌다.
+            </p>
+            <p class="text-base leading-relaxed mb-4">
+                본 조사는 생성형 AI 기술의 상품화 가능성과 사회적 수용성에 대한 인식 실태를 다각적으로 분석하는 데 목적이 있다. 이를 통해 AI가 적용될 산업 및 서비스 분야를 구체화하고, 이용자 관점에서의 기대와 우려를 균형 있게 파악하고자 한다. 또한 기술 발전이 창의성, 직업 윤리 등 인간 고유의 가치와 어떻게 조화를 이룰 수 있는지를 함께 고찰한다. 분석 결과는 향후 생성형 AI 관련 기술 개발 방향 수립과 시장 진입 전략, 정책적 지원 방안 마련에 실질적인 기초 자료로 활용될 수 있다.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-2">조사 계획</h3>
+            <ul class="list-disc list-inside text-base leading-relaxed mb-2">
+                <li><strong class="text-secondary-teal">조사 기간:</strong> 2025년 5월 19일 ~ 5월 21일</li>
+                <li><strong class="text-secondary-teal">조사 대상:</strong> 미림마이스터고등학교 1학년 2반 학생 17명</li>
+                <li><strong class="text-secondary-teal">조사 방법:</strong> 설문조사 및 심층 인터뷰 병행</li>
+            </ul>
+        </section>
+
+        <section class="lg:col-span-2 card p-6">
+            <h2 class="text-2xl font-bold mb-4 section-title">설문조사 결과</h2>
+
+            <article class="mb-8">
+                <h3 class="text-xl font-semibold mb-4">Q1. 생성형 AI(예: 챗GPT, 미드저니 등)를 사용해본 경험이 있나요?</h3>
+                <div class="chart-container w-full max-w-lg mx-auto">
+                    <canvas id="chartQ1"></canvas>
+                </div>
+                <p class="text-base leading-relaxed mt-4">
+                    조사 결과, 응답자의 <strong class="text-primary-blue">82.4%(14명)가 '매우 그렇다'(5점)</strong>고 응답했다. '그렇지 않다'(2점) 이하의 응답은 없었다. 이는 조사 대상 학생들 대부분이 생성형 AI를 사용한 경험이 있으며, 사용 빈도 또한 높음을 시사한다.
+                </p>
+            </article>
+
+            <article class="mb-8">
+                <h3 class="text-xl font-semibold mb-4">Q2. 생성형 AI를 활용하여 자신만의 상품을 직접 만들고 이를 실제로 판매하는 것에 대해 얼마나 관심이 있나요?</h3>
+                <div class="chart-container w-full max-w-lg mx-auto">
+                    <canvas id="chartQ2"></canvas>
+                </div>
+                <p class="text-base leading-relaxed mt-4">
+                    조사 결과, '보통이다'(3점)와 '관심 있다'(4점) 응답이 각각 <strong class="text-primary-blue">29.4%(5명)</strong>로 가장 높은 비율을 차지했다. '전혀 관심 없다'(1점)는 5.9%(1명), '관심 없다'(2점)는 23.5%(4명)로 나타났다. 이는 학생들이 생성형 AI를 활용한 상품 제작 및 판매에 대해 다양한 입장을 가지고 있으며, 특정 방향으로 치우치지 않고 관심이 고르게 분포되어 있음을 보여준다.
+                </p>
+            </article>
+
+            <article class="mb-8">
+                <h3 class="text-xl font-semibold mb-4">Q3. 생성형 AI 기술이 미래의 상품 개발 및 상품화에 얼마나 큰 영향을 미칠 것이라고 생각하시나요?</h3>
+                <div class="chart-container w-full max-w-lg mx-auto">
+                    <canvas id="chartQ3"></canvas>
+                </div>
+                <p class="text-base leading-relaxed mt-4">
+                    조사 결과, 응답자의 <strong class="text-primary-blue">94.1%(16명)가 '영향을 미칠 것이다'(4점) 또는 '매우 큰 영향을 미칠 것이다'(5점)</strong>라고 응답했다. '전혀 영향을 미치지 않을 것이다'(1점) 및 '보통이다'(3점) 응답은 없었다. 이는 학생들이 생성형 AI 기술이 미래 상품 개발 및 상품화에 있어서 핵심적인 도구가 될 것이며, 단순한 유행이 아니라 장기적으로 산업에 구조적인 영향을 줄 것이라는 인식을 폭넓게 공유하고 있음을 의미한다.
+                </p>
+            </article>
+        </section>
+
+        <section class="lg:col-span-3 card p-6">
+            <h2 class="text-2xl font-bold mb-4 section-title">인터뷰 결과</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-4 border border-supporting-light-blue rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">이서영 학생 인터뷰</h3>
+                    <p class="text-sm text-gray-600 mb-4">주요 키워드: 양산형 콘텐츠, 창의성/예술성, AI의 한계</p>
+                    <p class="text-base leading-relaxed mb-4">
+                        이서영 학생은 AI 이미지 생성 기술이 가져올 산업적 변화에 관심을 보였다. 특히 양산형 콘텐츠가 필요한 분야에서는 AI가 실질적인 수요를 채울 수 있다고 인정했다. 하지만 예술이나 창작의 영역에서는 AI가 인간만큼 감정을 담을 수 없다고 말한다. AI의 작업은 주어진 명령어와 데이터에 기반하므로, 삶의 이야기나 맥락이 담기기 어렵다고 보았다. 그녀는 AI 이미지에는 예술가의 진정성이나 개성이 빠져 있다고 말하며, 감각적인 선택이나 직관적인 판단은 아직까지 인간 디자이너의 몫이라고 생각한다. 이서영은 AI와 인간이 함께 작업할 수는 있겠지만, '창작자'의 자리를 AI가 대신하긴 어렵다고 본다. AI는 어디까지나 도구이지, 창작의 주체가 될 수는 없다는 입장을 가지고 있다. 요약하자면, 이서영은 AI의 실용성은 인정하지만 창작의 깊이와 감정은 인간만이 표현할 수 있다고 믿는다.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="bg-primary-blue text-white px-3 py-1 rounded-full">양산형 콘텐츠</span>
+                        <span class="bg-secondary-teal text-white px-3 py-1 rounded-full">창의성/예술성</span>
+                        <span class="bg-accent-grey text-white px-3 py-1 rounded-full">AI의 한계</span>
+                    </div>
+                </div>
+                <div class="p-4 border border-supporting-light-blue rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">이담현 학생 인터뷰</h3>
+                    <p class="text-sm text-gray-600 mb-4">주요 키워드: 이미지 생성, 디자이너 영향, 속도/효율성, 독창성 부족</p>
+                    <p class="text-base leading-relaxed mb-4">
+                        이담현은 AI 이미지 생성 기술이 빠르고 실용적이라는 점에서 긍정적인 평가를 한다. 특히 기업 마케팅 분야에서 AI를 활용하면 시간과 비용을 아낄 수 있어 유용하다고 보았다. 하지만 디자이너의 노력과 고유한 감성을 간과하는 점은 우려스럽다고 말한다. AI가 만든 이미지가 아무리 잘 만들어져도 사람의 창의성과 정성을 담은 작업과는 본질적으로 다르다고 생각했다. 그는 AI가 디자이너의 자리를 대체하는 것이 아니라, 보조 도구로 사용되었으면 한다고 강조한다. 또한 AI에 대한 과도한 환상은 경계할 필요가 있다고 보았다. 실제로는 AI의 결과물이 만족스럽지 않은 경우도 많고, 사람이 손질해야 할 부분도 많기 때문이다. 작업 속도는 빠르지만, 그만큼 품질이나 의도 전달 면에서는 부족할 수 있다고 지적한다. 그는 디자이너의 고민과 맥락이 없는 AI 작업물은 결국 '겉모습만 좋은 이미지'일 수 있다고 말한다. 요약하자면, 이담현은 AI의 효율성은 인정하지만 디자이너의 감성과 독창성을 결코 대체할 수 없다고 본다.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="bg-primary-blue text-white px-3 py-1 rounded-full">이미지 생성</span>
+                        <span class="bg-secondary-teal text-white px-3 py-1 rounded-full">디자이너 영향</span>
+                        <span class="bg-accent-grey text-white px-3 py-1 rounded-full">속도/효율성</span>
+                        <span class="bg-primary-blue text-white px-3 py-1 rounded-full">독창성 부족</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lg:col-span-3 card p-6">
+            <h2 class="text-2xl font-bold mb-4 section-title">결론 및 제언</h2>
+
+            <article class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">결론</h3>
+                <p class="text-base leading-relaxed mb-2">
+                    본 조사를 통해 미림마이스터고 1학년 학생들의 생성형 AI 활용과 상품화에 대한 인식을 파악했다.
+                </p>
+                <ul class="list-decimal list-inside text-base leading-relaxed">
+                    <li>학생들은 생성형 AI 사용 경험이 매우 높으며(82.4% '매우 그렇다'), 미래 상품 개발 및 상품화에 AI가 핵심적인 영향을 미칠 것이라고 강력하게 인식한다(94.1% '영향을 미칠 것' 이상). 이는 AI 기술의 실질적인 활용과 미래 변화에 대한 높은 기대감을 나타낸다.</li>
+                    <li>생성형 AI를 활용한 상품화에 대한 관심은 다양하게 분포한다. '보통이다'와 '관심 있다'는 각 29.4%를 차지하며, 일부 학생들은 여전히 낮은 관심을 보인다(관심 없음 29.4%). 이는 잠재적 관심이 있으나 구체적인 활용 방안이나 기대 효과에 대한 추가 정보가 필요함을 시사한다.</li>
+                    <li>학생들은 생성형 AI의 효율성과 속도에는 긍정적이지만, 독창성 부족과 인간 고유의 감정, 창의성을 요구하는 예술 및 디자인 분야에서의 한계에 대해서는 명확한 우려를 표명한다. 이는 AI의 기술적 장점과 인간적 가치 사이의 균형점을 모색하는 데 대한 인식을 반영한다.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3 class="text-xl font-semibold mb-2">제언</h3>
+                <p class="text-base leading-relaxed mb-2">
+                    생성형 AI가 발전하더라도 인간의 고유한 역할은 명확하게 존재한다. 따라서 AI와 인간이 각자의 강점을 발휘하여 상호 보완적으로 협력하는 방향을 모색해야 한다. 특히 미림마이스터고 학생들은 AI 기술을 단순히 소비하는 것을 넘어, 기술을 비판적으로 이해하고 현명하게 활용하는 역량을 함양해야 한다. 이를 위해 다음과 같은 구체적인 노력이 필요하다.
+                </p>
+                <ul class="list-disc list-inside text-base leading-relaxed">
+                    <li>생성형 AI의 기술적 이해와 함께, 윤리적 활용 및 사회적 영향에 대한 심층 교육을 강화해야 한다.</li>
+                    <li>AI가 대체할 수 없는 인간의 창의성, 감성, 비판적 사고력을 함양할 수 있는 교육 프로그램을 개발하고 적용해야 한다.</li>
+                    <li>학생들이 생성형 AI를 활용하여 실제 상품을 기획하고 개발하는 실질적인 기회를 제공하여, 기술 활용 능력과 책임감을 동시에 증진시켜야 한다.</li>
+                </ul>
+                <p class="text-base leading-relaxed mt-4">
+                    본 보고서가 미림마이스터고 1학년 학생들이 책임감 있고 올바르게 AI를 활용하여 상품화를 이해하고, 나아가 미래 사회의 건전한 AI 활용 문화를 선도하는 데 기여하기를 기대한다.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="text-center text-gray-500 text-sm mt-8 py-4">
+        <p>&copy; 2025 미림마이스터고 1학년 2반 1조. 모든 권리 보유.</p>
+    </footer>
+
+    <script>
+        // TypeScript code for Chart.js initialization and data handling
+        // All Chart.js charts are responsive: true, maintainAspectRatio: false
+        // Labels are wrapped around 16 characters for Korean.
+        // Custom tooltip callbacks are included for clarity.
+
+        interface SurveyData {
+            labels: string[];
+            data: number[];
+            percentages: number[];
+            backgroundColor: string[];
+            borderColor: string[];
+        }
+
+        const surveyQ1Data: SurveyData = {
+            labels: [
+                '전혀 그렇지 않다 (1점)',
+                '그렇지 않다 (2점)',
+                '보통이다 (3점)',
+                '그렇다 (4점)',
+                '매우 그렇다 (5점)'
+            ],
+            data: [0, 0, 2, 1, 14],
+            percentages: [0.0, 0.0, 11.4, 5.9, 82.4],
+            backgroundColor: [
+                '#A9A9A9', '#A9A9A9', '#4ECDC4', '#2A62B6', '#2A62B6'
+            ],
+            borderColor: [
+                '#A9A9A9', '#A9A9A9', '#4ECDC4', '#2A62B6', '#2A62B6'
+            ]
+        };
+
+        const surveyQ2Data: SurveyData = {
+            labels: [
+                '전혀 관심 없다 (1점)',
+                '관심 없다 (2점)',
+                '보통이다 (3점)',
+                '관심 있다 (4점)',
+                '매우 관심 있다 (5점)'
+            ],
+            data: [1, 4, 5, 5, 2],
+            percentages: [5.9, 23.5, 29.4, 29.4, 11.8],
+            backgroundColor: [
+                '#A9A9A9', '#A9A9A9', '#4ECDC4', '#2A62B6', '#2A62B6'
+            ],
+            borderColor: [
+                '#A9A9A9', '#A9A9A9', '#4ECDC4', '#2A62B6', '#2A62B6'
+            ]
+        };
+
+        const surveyQ3Data: SurveyData = {
+            labels: [
+                '전혀 영향을 미치지 않을 것이다 (1점)',
+                '영향을 미치지 않을 것이다 (2점)',
+                '보통이다 (3점)',
+                '영향을 미칠 것이다 (4점)',
+                '매우 큰 영향을 미칠 것이다 (5점)'
+            ],
+            data: [0, 1, 0, 9, 7],
+            percentages: [0.0, 5.9, 0.0, 52.9, 41.2],
+            backgroundColor: [
+                '#A9A9A9', '#A9A9A9', '#A9A9A9', '#2A62B6', '#2A62B6'
+            ],
+            borderColor: [
+                '#A9A9A9', '#A9A9A9', '#A9A9A9', '#2A62B6', '#2A62B6'
+            ]
+        };
+
+        // Function to create a bar chart
+        function createBarChart(ctx: CanvasRenderingContext2D, data: SurveyData, title: string): void {
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.labels.map(label => label.split(' ').map((word, index) => {
+                        // Simple word wrapping for Korean labels, split by space or approximate 16 chars
+                        const charLimit = 16;
+                        if (label.length > charLimit && index > 0) {
+                            return word; // Let Chart.js handle natural breaks
+                        }
+                        return word;
+                    }).join(' ')),
+                    datasets: [{
+                        label: '응답수 (명)',
+                        data: data.data,
+                        backgroundColor: data.backgroundColor,
+                        borderColor: data.borderColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: title,
+                            font: { size: 16 }
+                        },
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.dataset.label || '';
+                                    const value = context.raw;
+                                    const percentage = data.percentages[context.dataIndex];
+                                    return `${label}: ${value}명 (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                callback: function(value: any, index: number, ticks: any): string|string[] {
+                                    const label = this.getLabelForValue(value);
+                                    // Custom line break for long labels
+                                    if (label.length > 10) { // Adjust threshold as needed
+                                        const words = label.split(' ');
+                                        let lines: string[] = [];
+                                        let currentLine = '';
+                                        for (let i = 0; i < words.length; i++) {
+                                            if ((currentLine + words[i]).length < 16) { // Approx char limit
+                                                currentLine += (i === 0 ? '' : ' ') + words[i];
+                                            } else {
+                                                lines.push(currentLine);
+                                                currentLine = words[i];
+                                            }
+                                        }
+                                        lines.push(currentLine);
+                                        return lines;
+                                    }
+                                    return label;
+                                }
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '응답자 수 (명)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctxQ1 = (document.getElementById('chartQ1') as HTMLCanvasElement)?.getContext('2d');
+            if (ctxQ1) {
+                createBarChart(ctxQ1, surveyQ1Data, 'Q1. 생성형 AI 사용 경험');
+            }
+
+            const ctxQ2 = (document.getElementById('chartQ2') as HTMLCanvasElement)?.getContext('2d');
+            if (ctxQ2) {
+                createBarChart(ctxQ2, surveyQ2Data, 'Q2. 생성형 AI 활용 상품화 관심도');
+            }
+
+            const ctxQ3 = (document.getElementById('chartQ3') as HTMLCanvasElement)?.getContext('2d');
+            if (ctxQ3) {
+                createBarChart(ctxQ3, surveyQ3Data, 'Q3. 미래 상품화에 대한 AI 기술 영향력 인식');
+            }
+        });
+    </script>
+    </body>
+</html>
